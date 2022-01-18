@@ -1,0 +1,32 @@
+ALGORITHM CHECKPOINT ALGO1
+VAR
+    c:CHAR;
+    count,vcount,word:INTEGER; 
+BEGIN
+    count:=0;
+    vcount:=0;
+    word:=1
+    REPEAT
+    Read( c )
+    count:= count + 1;
+
+IF ( if c in [A,E,I,O,U,I,a,e,i,o,u,y,u])
+        THEN  vcount = vcount + 1;
+END_IF
+        IF (c=' ') THEN
+            word:= word+1
+        END_IF
+    UNTIL (c='.')
+    Write ('Number of caracter:',count)
+    Write ('Number of words:',word)
+    Write ('number of vowels:',vcount)
+    END
+
+
+
+
+
+
+
+
+
