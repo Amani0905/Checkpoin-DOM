@@ -29,7 +29,7 @@ BEGIN
     END_FOR
 END
 //////////DOT PRODUCT FUNCTION////////////
-FUNCTION dot_product(v1,v2 )
+FUNCTION dot_product(v1,v2 ):INTEGER_OF ARRAY
 VAR
     i,j,ps:INTEGER
 BEGIN
