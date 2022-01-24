@@ -1,0 +1,59 @@
+///////////DOT PRODUCT PROCEDURE////////////
+PROCEDURE dot_product(v1,v2:ARRAY_OF INTEGER [], VAR ps:INTEGER )
+VAR
+    i: INTEGER
+BEGIN
+    ps:=0
+    FOR i FROM 0 TO v1.length DO
+        ps:= ps+v1[i]*v2[i]
+    END_FOR
+    Write(ps)
+END
+
+ALGORITHM Orthogonal_Test
+VAR
+    arr:=ARRAY_OF ARRAYS
+    i,j: INTEGER 
+BEGIN
+    FOR i FROM 0 TO arr.length-2 DO
+        FOR j FROM i+1 TO arr.length-1
+    v1:= arr[i]
+    v2:= arr[j]
+    ps:=0
+    dot_product (v1,v2,ps)
+        IF (ps=0) THEN
+            Write ('The two vectors are orthogonal')
+            ELSE 
+            Write ('The two vectors are not orthogonal')
+        END_IF
+    END_FOR
+END
+//////////DOT PRODUCT FUNCTION////////////
+FUNCTION dot_product(v1,v2 )
+VAR
+    i,j,ps:INTEGER
+BEGIN
+    FOR i FROM 0 TO v1.length DO
+        ps:= ps+v1[i]*v2[i]
+    END_FOR
+    RETURN ps
+END
+
+ALGORITHM Orthogonal_Test
+VAR
+    arr:=ARRAY_OF ARRAYS
+    i,j: INTEGER 
+BEGIN
+    FOR i FROM 0 TO arr.length-2 DO
+        FOR j FROM i+1 TO arr.length-1
+    ps:=0
+    v1:= arr[i]
+    v2:= arr[j]
+    ps:=dot_product (v1,v2,ps)
+        IF (ps=0) THEN
+            Write ('The two vectors are orthogonal')
+            ELSE 
+            Write ('The two vectors are not orthogonal')
+        END_IF
+    END_FOR
+END
