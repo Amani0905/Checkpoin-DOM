@@ -1,0 +1,14 @@
+ PROCEDURE Insertion_Sort(arr: ARRAY_OF INTEGER)
+VAR
+    i,j,elm:INTEGER
+BEGIN
+FOR (i=1,i<arr.length-1,i++);
+    elm=arr[i];
+    j=i-1;
+    WHILE (j>=0 && arr[j]<elm) DO
+        arr[j+1]=arr[j];
+        j=j-1;
+        arr[j+1]=elm;
+    END_WHILE
+END_FOR    
+END
